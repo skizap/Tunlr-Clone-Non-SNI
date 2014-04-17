@@ -62,3 +62,7 @@ Enjoy!
 | vps-haproxy.cfg | Sample configuration for a VPS proxy that forwards packets from different ports to the appropriate Netflix domains. In its current configuration this will only work with an appropriate LAN proxy server; with simple modifications it could also allow SNI-capable clients to use it directly (in concert with a VPS-side DNS spoofer). |
 | dnsmasq.conf | A matching dnsmasq configuration for use with lan-haproxy.conf. This is required for in-house DNS spoofing for non-SNI clients. |
 | iplist.txt | A list of IP addresses and ports, and where they get forwarded to. This is just to keep track of this confusing mess in case you need to make changes. |
+
+###Links###
+[A tutorial for setting up the LAN server using Arch on a Raspberry Pi](https://github.com/SchroederChris/TunlrLikeDnsProxyRaspberryPi)
+[An alternative non-SNI solution using iptables on the LAN server](https://trick77.com/2014/04/02/netflix-dns-unblocking-without-sni-xbox-360-ps3-samsung-tv/)
