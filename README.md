@@ -65,4 +65,5 @@ Enjoy!
 
 ###Links###
 [A tutorial for setting up the LAN server using Arch on a Raspberry Pi](https://github.com/SchroederChris/TunlrLikeDnsProxyRaspberryPi)
+
 [An alternative non-SNI solution using iptables on the LAN server](https://trick77.com/2014/04/02/netflix-dns-unblocking-without-sni-xbox-360-ps3-samsung-tv/)
