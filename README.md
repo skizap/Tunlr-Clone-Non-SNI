@@ -46,7 +46,7 @@ If you also want to allow SNI-capable clients to geolocate to the US when not on
 
 ###Generating Configuration Files###
 With the `configgen.sh` script and `iplist.txt` file, you can generate the configuration files used in this tutorial. It will probably be easier to generate configuration files than it would be to edit the existing ones, since `configgen.sh` will replace your VPS IP and stat interface password for you. The relevant configuration variables are at the top of the file. A standard generation command would be something like this:
-`IPPREFIX="192.168.0." VPSIP="9.8.7.6" HAPROXYPASS="mypassword" ./configgen.sh`
+```IPPREFIX="192.168.0." VPSIP="9.8.7.6" HAPROXYPASS="mypassword" ./configgen.sh```
 Note that if you change the IPSTART variable, you will have to change the IP octets at the beginning of each line in `iplist.txt`.
 
 If you want/need to add/remove domains for SNI-capable clients only, follow the format of the SNI-specific domain section in `iplist.txt`. It should be noted that I do not forward any of the SNI-specific domains (so I comment those out in `iplist.txt`) and I have had no trouble with browser-based playback; however, your experiences may differ, so I have left the domains active by default.
@@ -69,7 +69,7 @@ Enjoy!
 | vps-haproxy.cfg | Sample configuration for a VPS proxy that forwards packets from different ports to the appropriate Netflix domains. This configuration currently also allows SNI-capable clients to use it directly. |
 | dnsmasq.conf | A matching dnsmasq configuration for use with lan-haproxy.conf. This is required for in-house DNS spoofing for non-SNI clients. |
 | iplist.txt | A list of IP addresses (just the last octet) and where they get forwarded to. Together with haproxygen.sh, this can generate the other configuration files. |
-| configgen.sh | A bash script that generates lan-haproxy.cfg, vps-haproxy.cfg, and dnsmasq.conf according to subdomains specified in iplist.txt and passed parameters. |
+| configgen.sh | A bash script that generates lan-haproxy.cfg, vps-haproxy.cfg, and dnsmasq.conf according to subdomains specified in iplist.txt and environment variables. |
 
 ###Links###
 [A tutorial for setting up the LAN server using Arch on a Raspberry Pi](https://github.com/SchroederChris/TunlrLikeDnsProxyRaspberryPi)
