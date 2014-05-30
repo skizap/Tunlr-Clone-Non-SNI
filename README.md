@@ -47,6 +47,7 @@ If you also want to allow SNI-capable clients to geolocate to the US when not on
 ###Generating Configuration Files###
 With the `configgen.sh` script and `iplist.txt` file, you can generate the configuration files used in this tutorial. It will probably be easier to generate configuration files than it would be to edit the existing ones, since `configgen.sh` will replace your VPS IP and stat interface password for you. The relevant configuration variables are at the top of the file. A standard generation command would be something like this:
 ```IPPREFIX="192.168.0." VPSIP="9.8.7.6" HAPROXYPASS="mypassword" ./configgen.sh```
+
 Note that if you change the IPSTART variable, you will have to change the IP octets at the beginning of each line in `iplist.txt`.
 
 If you want/need to add/remove domains for SNI-capable clients only, follow the format of the SNI-specific domain section in `iplist.txt`. It should be noted that I do not forward any of the SNI-specific domains (so I comment those out in `iplist.txt`) and I have had no trouble with browser-based playback; however, your experiences may differ, so I have left the domains active by default.
